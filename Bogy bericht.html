@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+        <link rel="stylesheet" type="text/css" href="csso.css">
+</head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+        $(document).ready(function(){
+          $("a").on('click', function(event) {
+        
+            if (this.hash !== "") {
+              event.preventDefault();
+              var hash = this.hash;
+              $('html, body').animate({
+                scrollTop: $(hash).offset().top
+              }, 800, function(){
+                window.location.hash = hash;
+              });
+            } 
+          });
+        });
+        </script>    <div>
+            <div style="display: flex; justify-content: center; align-items: flex-end;" id="navbar">
+                    <a href="#home">Eignung und Neigung</a>
+                    <a href="#news">Praktikumsplatz</a>
+                    <a href="#contact">Praktikumsstelle</a>
+                    <a href="#ablauf">Ablauf</a>
+                    <a href="#Fazit">Fazit</a>
+                  </div>
+    </div>
+            </div>
+                <div id="home" style="background-color: white; height: 300px; font-family: cursive;font-size: 18px; border:black 5px solid; margin-top: 80px;">Persönliche Eignung und Neigung
+                <h1  style="font-size:smaller">skf</h1></div>
+                <div id="news" style="background-color: white; height: 300px;font-family: cursive; font-size: 18px; margin-top: 20px; border:black 5px solid">Die Suche nach dem praktikumsplatz</div>
+                <div id="contact" style="background-color: white; height: 300px;font-family: cursive;font-size: 18px; margin-top: 20px; border:black 5px solid">Meine Praktikumsstelle</div>
+                <div id="ablauf" style="background-color: white; height: 300px;font-family: cursive;font-size: 18px; margin-top: 20px; border:black 5px solid">Ablauf</div>
+                <div id="Fazit" style="background-color: white; height: 300px;font-family: cursive;font-size: 18px; margin-top: 20px; border:black 5px solid">Fazit</div>
+              
+</body>
+</html>
